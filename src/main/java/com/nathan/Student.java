@@ -6,16 +6,14 @@ import lombok.Setter;
 
 import java.time.LocalDate;
 
-@AllArgsConstructor
 @Getter
 @Setter
-public class Student {
-    private final int id;
-    private final String firstName;
-    private final String lastName;
-    private LocalDate dateOfBirth;
-    private String email;
-    private String phoneNumber;
+public class Student extends Person{
     private String group;
+
+    public Student(int id, String firstName, String lastName, LocalDate dateOfBirth, String email, String phoneNumber, String group) {
+        super(id, firstName, lastName, dateOfBirth, email, phoneNumber);
+        this.group = group;
+    }
     //private Tutor tutor;
 }
